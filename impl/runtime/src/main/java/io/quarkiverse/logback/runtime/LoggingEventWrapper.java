@@ -87,8 +87,8 @@ public class LoggingEventWrapper implements ILoggingEvent {
                             null,
                             logRecord.getSourceModuleName(),
                             logRecord.getSourceModuleVersion(),
-                            logRecord.getSourceClassName(),
-                            logRecord.getSourceMethodName(),
+                            logRecord.getSourceClassName() == null ? "null" : logRecord.getSourceClassName(),
+                            logRecord.getSourceMethodName() == null ? "null" : logRecord.getSourceMethodName(),
                             logRecord.getSourceFileName(),
                             logRecord.getSourceLineNumber())
             };
